@@ -12,29 +12,33 @@ import { TbUnlink } from 'react-icons/tb';
 import { FaRegCalendarCheck } from 'react-icons/fa';
 import { BsPlusLg } from 'react-icons/bs';
 import { IoMdAlert } from 'react-icons/io';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+
 
 
 const Home: NextPage = () => {
 
   const size = 35
   const arrayIcons: any = []
-  arrayIcons.push(<BiNetworkChart size={size}/>)
-  arrayIcons.push(<BiHomeAlt size={size}/>)
-  arrayIcons.push(<MdClose size={size}/>)
-  arrayIcons.push(<HiDotsVertical size={size}/>)
-  arrayIcons.push(<HiOutlineLightBulb size={size}/>)
-  arrayIcons.push(<FiChevronsLeft size={size}/>)
-  arrayIcons.push(<FiChevronsRight size={size}/>)
-  arrayIcons.push(<CgChevronDown size={size}/>)
-  arrayIcons.push(<CgChevronRight size={size}/>)
-  arrayIcons.push(<CgChevronLeft size={size}/>)
-  arrayIcons.push(<CgChevronUp size={size}/>)
-  arrayIcons.push(<RiCheckboxBlankCircleFill size={size}/>)
-  arrayIcons.push(<RiCheckboxBlankCircleLine size={size}/>)
-  arrayIcons.push(<TbUnlink size={size}/>)
-  arrayIcons.push(<FaRegCalendarCheck size={size}/>)
-  arrayIcons.push(<BsPlusLg size={size}/>)
-  arrayIcons.push(<IoMdAlert size={size}/>)
+  arrayIcons.push(<BiNetworkChart size={size} />)
+  arrayIcons.push(<BiHomeAlt size={size} />)
+  arrayIcons.push(<MdClose size={size} />)
+  arrayIcons.push(<HiDotsVertical size={size} />)
+  arrayIcons.push(<HiOutlineLightBulb size={size} />)
+  arrayIcons.push(<FiChevronsLeft size={size} />)
+  arrayIcons.push(<FiChevronsRight size={size} />)
+  arrayIcons.push(<CgChevronDown size={size} />)
+  arrayIcons.push(<CgChevronRight size={size} />)
+  arrayIcons.push(<CgChevronLeft size={size} />)
+  arrayIcons.push(<CgChevronUp size={size} />)
+  arrayIcons.push(<RiCheckboxBlankCircleFill size={size} />)
+  arrayIcons.push(<RiCheckboxBlankCircleLine size={size} />)
+  arrayIcons.push(<TbUnlink size={size} />)
+  arrayIcons.push(<FaRegCalendarCheck size={size} />)
+  arrayIcons.push(<BsPlusLg size={size} />)
+  arrayIcons.push(<IoMdAlert size={size} />)
+  arrayIcons.push(<BsChevronLeft size={size} />)
+  arrayIcons.push(<BsChevronRight size={size} />)
 
 
   return (
@@ -47,9 +51,9 @@ const Home: NextPage = () => {
       </div>
       <div style={{ width: 600, margin: 'auto' }}>
         {
-          arrayIcons.map((e:any, i:any) => {
+          arrayIcons.map((e: any, i: any) => {
             return (
-              <div style={{display:'inline-block'}} key={`div${i}`}>
+              <div style={{ display: 'inline-block' }} key={`div${i}`}>
                 <button className='icon-button'>
                   <IconContext.Provider value={{ className: "icon-button-Svg" }} key={i}>{e}</IconContext.Provider>
                 </button>
