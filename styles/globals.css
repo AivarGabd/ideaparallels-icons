@@ -15,7 +15,7 @@ body {
 }
 
 .main-card {
-  margin: 10% auto;
+  margin: auto;
   width: 400px;
   background-color: var(--card-bg-color);
   text-align: left;

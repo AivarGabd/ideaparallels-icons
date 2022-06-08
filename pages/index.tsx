@@ -2,14 +2,14 @@ import type { NextPage } from 'next'
 
 import { IconContext } from "react-icons";
 
-import { BiNetworkChart, BiHomeAlt } from 'react-icons/bi'
+import { BiNetworkChart, BiHomeAlt,BiTrash } from 'react-icons/bi'
 import { MdClose } from 'react-icons/md';
-import { HiDotsVertical, HiOutlineLightBulb } from 'react-icons/hi';
+import { HiDotsVertical, HiOutlineLightBulb, HiOutlinePencil } from 'react-icons/hi';
 import { FiChevronsLeft, FiChevronsRight } from 'react-icons/fi';
 import { CgChevronDown, CgChevronRight, CgChevronLeft, CgChevronUp } from 'react-icons/cg';
 import { RiCheckboxBlankCircleFill, RiCheckboxBlankCircleLine } from 'react-icons/ri';
 import { TbUnlink } from 'react-icons/tb';
-import { FaRegCalendarCheck } from 'react-icons/fa';
+import { FaRegCalendarCheck, FaGlasses } from 'react-icons/fa';
 import { BsPlusLg } from 'react-icons/bs';
 import { IoMdAlert } from 'react-icons/io';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
@@ -22,9 +22,11 @@ const Home: NextPage = () => {
   const arrayIcons: any = []
   arrayIcons.push(<BiNetworkChart size={size} />)
   arrayIcons.push(<BiHomeAlt size={size} />)
+  arrayIcons.push(<BiTrash size={size} />)
   arrayIcons.push(<MdClose size={size} />)
   arrayIcons.push(<HiDotsVertical size={size} />)
   arrayIcons.push(<HiOutlineLightBulb size={size} />)
+  arrayIcons.push(<HiOutlinePencil size={size} />)
   arrayIcons.push(<FiChevronsLeft size={size} />)
   arrayIcons.push(<FiChevronsRight size={size} />)
   arrayIcons.push(<CgChevronDown size={size} />)
@@ -42,7 +44,7 @@ const Home: NextPage = () => {
 
 
   return (
-    <div>
+    <div style={{margin:'10%'}}>
       <div className='main-card'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
