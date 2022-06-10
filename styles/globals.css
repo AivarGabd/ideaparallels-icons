@@ -34,9 +34,42 @@ body {
   -webkit-filter: blur(0.5px);
   padding: 10px;
 }
+
 .icon-button-Svg {
   color: var(--text-color);
 }
-.icon-button-Svg:disabled {
+.icon-button:disabled {
   color: var(--disabled-content-color);
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 1000px;
+  background-color: black;
+}
+
+.box .row {
+  width: 350px;
+}
+
+.box .row.header {
+  flex: 0 1 auto;
+  background-color: whitesmoke;
+  height: 300px;
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
+}
+
+.box .row.content {
+  flex: 1 1 auto;
+  background-color: gray;
+}
+
+.box .row.footer {
+  flex: 0 1 300px;
+  background-color: white;
 }
