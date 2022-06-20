@@ -1,9 +1,13 @@
 import type { NextPage } from 'next'
 import React, { useState } from 'react';
-import { Tooltip, Button, Grid } from "@nextui-org/react";
-import { Dropdown } from "@nextui-org/react";
+import NextLink from 'next/link'
+import { Tooltip, Button, Grid, Col, Spacer, Container, Card, Row, Text, Avatar, Link } from "@nextui-org/react";
 import { IconContext } from "react-icons";
-import CustomCalendar from './CustomCalendar'
+import { UserTwitterCard } from './UserTwitterCard'
+import { UserTwitterCard1 } from './TwitterUserCard';
+import { TrashIcon } from './TrashIcon';
+import { ArticlePreview } from './ArticlePreview';
+
 
 import { BiNetworkChart, BiHomeAlt, BiTrash } from 'react-icons/bi'
 import { MdClose } from 'react-icons/md';
@@ -16,11 +20,11 @@ import { FaRegCalendarCheck, FaGlasses } from 'react-icons/fa';
 import { BsPlusLg } from 'react-icons/bs';
 import { IoMdAlert } from 'react-icons/io';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
-import { UserTwitterCard } from './UserTwitterCard'
+import { TbBookmark, TbBookmarks } from 'react-icons/tb'
 
 
 const Home: NextPage = () => {
-  
+
 
   const size = 35
   const arrayIcons: any = []
@@ -47,11 +51,105 @@ const Home: NextPage = () => {
   arrayIcons.push(<IoMdAlert size={size} />)
   arrayIcons.push(<BsChevronLeft size={size} />)
   arrayIcons.push(<BsChevronRight size={size} />)
+  arrayIcons.push(<TbBookmark size={size} />)
+  arrayIcons.push(<TbBookmarks size={size} />)
 
 
   return (
     <div style={{ margin: '10%' }}>
-      <CustomCalendar />
+      <div style={{ width: 50 }}>
+        <Avatar
+          text="2"
+          color="error"
+          textColor="white"
+          size="xs"
+          style={{ marginBottom: -13, marginLeft: 8 }}
+        />
+        <IconContext.Provider value={{ className: "icon-button-Svg" }}>
+          <FiExternalLink size={23} />
+        </IconContext.Provider>
+      </div>
+      <div>
+  
+
+        <Card css={{ mw: "250px" }}>
+          <Card.Body>
+            <Text size="1em">Recourses of 'How to find users' got <b>3</b> new updates</Text>
+          </Card.Body>
+        </Card>
+        
+      </div>
+
+
+      <div>
+        <Card css={{ backgroundColor: 'var(--border-color)', mw: "270px", }} >
+          <Row>
+            <Grid.Container
+              className="user-twitter-card__container"
+              css={{
+                mw: "270px",
+                borderRadius: "$lg",
+                padding: "$sm"
+              }}
+            >
+
+              <Grid.Container direction='row'>
+                <Tooltip placement="top" content={<UserTwitterCard1 />}>
+                  <Grid.Container>
+                    <Row justify="space-between" align="center">
+
+                      <Avatar
+                        size="md"
+                        src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                        rounded
+                      />
+
+                      <Spacer x={0.5} />
+                      <Row>
+                        <Grid xs={12} direction="column">
+                          <Text className="user-twitter-card__text" b size={15}>
+                            Zoey Lang
+                          </Text>
+                        </Grid>
+                      </Row>
+                    </Row>
+                  </Grid.Container>
+                </Tooltip>
+                <Spacer x={2.5} />
+                <Grid>
+                  <Tooltip content="Remove resource" color="invert">
+                    <Button auto color="error" flat>
+                      <TrashIcon />
+                    </Button>
+                  </Tooltip>
+                </Grid>
+
+              </Grid.Container>
+
+              <Grid.Container className="user-twitter-card__username-container">
+                <Grid xs={12}>
+                  <Tooltip content={<ArticlePreview />} placement="bottom">
+                    <Link block color="secondary" href="#">
+                      Openphone - How we got to 1000 paying users
+                    </Link>
+                  </Tooltip>
+                </Grid>
+              </Grid.Container>
+            </Grid.Container>
+          </Row>
+          <Card css={{ backgroundColor: 'var(--card-bg-color)' }} variant="bordered">
+            <Card.Header>
+              <Text b>Updates from your last visit</Text>
+            </Card.Header>
+            <Card.Divider />
+            <Card.Body>
+              <Text>+1 link</Text>
+              <Text>+2 backlink</Text>
+            </Card.Body>
+          </Card>
+        </Card>
+      </div>
+
 
       <div className='main-card'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

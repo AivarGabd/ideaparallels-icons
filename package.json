@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "latest",
+    "@emotion/react": "latest",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.8.3",
     "@nextui-org/react": "^1.0.0-beta.8",
     "antd": "4.21.0",
     "craco-less": "^2.0.0",
@@ -19,7 +22,7 @@
     "react-calendar": "^3.7.0",
     "react-color": "^2.19.3",
     "react-dom": "18.1.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "latest",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
