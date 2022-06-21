@@ -1,3 +1,5 @@
+
+/* 
 <div className='main-card'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -77,3 +79,6 @@ import { BsPlusLg } from 'react-icons/bs';
 import { IoMdAlert } from 'react-icons/io';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import { TbBookmark, TbBookmarks } from 'react-icons/tb'
+
+
+*/
