@@ -1,4 +1,4 @@
-import { Card, Avatar, Grid, Button, Text, Tooltip, Row, Col, Spacer, Switch } from '@nextui-org/react';
+import { Card, Avatar, Grid, Button, Text, Tooltip, Row, Col, Spacer, Switch, Link } from '@nextui-org/react';
 import { useEffect, useState } from 'react';
 import HeartIcon from './HeartIcon';
 import NotificationIcon from './NotificationIcon';
@@ -17,17 +17,20 @@ export default function ProfilePageUserBlock() {
                     maxDelay={10000}
                     objectFit="cover"
                     width="100%"
-                    height={100}
+                    height={80}
                 />
-                <Grid css={{ position: 'absolute', right: 0, margin: 4 }}>
+
+
+                <Grid css={{ position: 'absolute', right: 0, margin: 4,zIndex: 2 }}>
                     <Tooltip content="Support work" placement='right'>
                         <Button
                             shadow
                             auto
                             color="error"
-                            icon={<HeartIcon />} />
+                            icon={<HeartIcon fill="currentColor" filled />} />
                     </Tooltip>
-                    <Spacer y={0.2} />
+
+                    <Spacer y={0.1} />
                     <Tooltip content="Stay tuned for updates" placement='right'>
                         <Switch
                             checked={false}
@@ -37,37 +40,25 @@ export default function ProfilePageUserBlock() {
                     </Tooltip>
                 </Grid>
 
-                <Grid.Container
-                    className="user-twitter-card__container"
-                    css={{
-                        mw: "none",
-                        borderRadius: "$lg",
-                        padding: "$sm"
-                    }}
-                >
+                <Grid.Container css={{ padding: "$sm", marginTop: -40 }}>
                     <Row justify="space-between" align="center">
                         <Col span={0}>
                             <Avatar
-                                size="lg"
+                                size="xl"
                                 src="https://storage.yandexcloud.net/ideaparallels/2FiwWZEB_400x400.jpg"
                                 bordered
                             />
                         </Col>
                         <Col span={9}>
                             <Row>
-                                <Grid xs={12} direction="column">
-                                    <Text className="user-twitter-card__text" b size={15}>
+                                <Grid xs={12} direction="column" css={{ marginLeft: 4 }}>
+                                    <Text b size={18} css={{ mt: "$10" }}>
                                         Aivar Gabdrahmanov
                                     </Text>
-                                    <Text
-                                        className="user-twitter-card__text"
-                                        size={14}
-                                        css={{ mt: "-$3" }}
-                                        color="#888888"
-                                    >
-                                        <span style={{ color: '#1D9BF0', cursor: 'pointer' }}>
+                                    <Text size={15} css={{ mt: "-$5" }} color="#1D9BF0">
+                                        <Link >
                                             @aivargab
-                                        </span>
+                                        </Link>
                                     </Text>
                                 </Grid>
                             </Row>
@@ -116,14 +107,11 @@ export default function ProfilePageUserBlock() {
                             </Text>
                             Followers
                         </Text>
-                        <Grid>
-                            <Text h4>4 published articles</Text>
-                        </Grid>
+
                     </Grid.Container>
 
                 </Grid.Container>
             </Card.Body>
-
         </Card>
     )
 }

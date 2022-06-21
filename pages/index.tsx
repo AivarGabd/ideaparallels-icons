@@ -7,9 +7,7 @@ import ProfilePageUserBlock from './ProfilePageUserBlock';
 const Home: NextPage = () => {
 
   return (
-    <div style={{ margin: '10%' }}>
       <ProfilePageUserBlock />
-    </div>
   )
 }
 
