@@ -6,7 +6,7 @@ import NotificationIcon from './NotificationIcon';
 
 
 export default function ProfilePageUserBlock() {
-    
+
 
     return (
         <Card css={{ mw: "280px" }}>
