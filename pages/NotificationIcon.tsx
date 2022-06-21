@@ -1,6 +1,5 @@
 
-export const NotificationIcon = ({
-  fill = "currentColor"}) => {
+export default function NotificationIcon({ fill = "currentColor" }) {
   return (
     <svg
       width={24}

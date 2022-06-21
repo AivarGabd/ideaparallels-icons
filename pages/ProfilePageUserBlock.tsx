@@ -1,7 +1,7 @@
 import { Card, Avatar, Grid, Button, Text, Tooltip, Row, Col, Spacer, Switch } from '@nextui-org/react';
 import { useEffect, useState } from 'react';
-import { HeartIcon } from './HeartIcon';
-import { NotificationIcon } from './NotificationIcon';
+import HeartIcon from './HeartIcon';
+import NotificationIcon from './NotificationIcon';
 
 
 
